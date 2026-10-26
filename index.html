@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fraternidade Irmãos de Francisco</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header class="site">
         <div class="nav-inner">
-            <div class="marca">
+            
+            <a href="#" class="marca">
                 <img src="https://irmaosdefrancisco.wordpress.com/wp-content/uploads/2021/05/cropped-irmaos-de-francisco-dimensionada.png" alt="Fraternidade Irmãos de Francisco" class="logo">
                 Irmãos de Francisco
-            </div>
+            </a>
             <nav class="links">
                 <a href="#sobre">Sobre</a>
                 <a href="#projetos">Projetos</a>
@@ -23,26 +26,26 @@
                 <a href="#depoimentos">Depoimentos</a>
                 <a href="#ajudar">Como ajudar</a>
                 <a href="#contato">Contato</a>
-                <a href="#doar" class="nav-doar">Doar Via Pix</a>
+                
+                <button onclick="abrirModalPix()" class="nav-doar"><i class="fa-brands fa-pix"></i> Doar Via Pix</button>
             </nav>
         </div>
     </header>
 
-    <Main>
-        <Section class="section-1">
+    <main>
+        <section class="section-1">
             <div class="wrap section-grid">
                 <div>
-
                     <div class="name">Fraternidade de Aliança . Campina Grande, PB</div>
 
                     <h1>Cuidado e presença para quem vive nas ruas de nossa cidade</h1>
                     <p class="lead"> Há 15 anos, levamos alimento, agasalho e acolhimento a quem mais precisa — noite após noite, praça por praça. Isso só é possível com quem doa, veste e caminha com a gente.</p>
 
                     <div class="section1-actions">
-                        <a href="#ajudar" class="btn btn-primary">Fazer uma doação via Pix</a>
+                       
+                        <button onclick="abrirModalPix()" class="btn btn-primary"><i class="fa-brands fa-pix"></i> Fazer uma doação via Pix</button>
                         <a href="#projetos" class="btn btn-ghost">Conhecer as ações</a>
                     </div>
-            
                 </div>
 
                 <div class="section-1-art">
@@ -58,15 +61,15 @@
                      </svg>
                 </div>
             </div>
-        </Section>
+        </section>
 
-        <Section class="information">
+        <section class="information">
             <div class="wrap information-grid">
                 <div class="info"><div class="num">15</div><div class="label">anos de atuação em Campina Grande</div></div>
                 <div class="info"><div class="num">400</div><div class="label">pessoas em situação de rua acompanhadas</div></div>
                 <div class="info"><div class="num">2×</div><div class="label">saídas semanais às ruas da cidade</div></div>
             </div>
-        </Section>
+        </section>
 
         <section class="sobre" id="sobre">
             <div class="wrap sobre-grid">
@@ -82,7 +85,6 @@
 
         <section class="projetos" id="projetos">
             <div class="wrap">
-
                 <div class="projetos-head">
                     <h2>Nossas ações</h2>
                      <p>Frentes de trabalho que se repetem ao longo do ano, cada uma respondendo a uma necessidade diferente de quem vive nas ruas.</p>
@@ -90,17 +92,14 @@
 
                 <div class="projeto-row">
                     <div class="projeto-icon"><svg viewBox="0 0 48 48" fill="none"><rect x="8" y="18" width="32" height="20" rx="2" stroke="currentColor" stroke-width="2"/><path d="M8 24h32M16 18v-4a8 8 0 0116 0v4" stroke="currentColor" stroke-width="2"/></svg></div>
-
                     <div class="projeto-text">
                         <h3>Campanha do Agasalho</h3>
                         <p>Arrecadação anual de cobertores, mantas e roupas de frio, distribuídos diretamente a quem dorme ao relento durante os meses mais frios do ano em Campina Grande.</p>
                     </div>
-
                 </div>
 
                 <div class="projeto-row">
                     <div class="projeto-icon"><svg viewBox="0 0 48 48" fill="none"><path d="M24 8l4 8 9 1-6.5 6.5L32 32l-8-4-8 4 1.5-8.5L11 17l9-1 4-8z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M14 38h20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></div>
-                    
                     <div class="projeto-text">
                         <h3>Natal dos Moradores em Situação de Rua</h3>
                          <p>Celebração anual na Praça da Bandeira, com missa e ceia natalina, reunindo dezenas de voluntários e centenas de pessoas em situação de rua em uma noite de acolhimento.</p>
@@ -109,7 +108,6 @@
 
                 <div class="projeto-row">
                     <div class="projeto-icon"><svg viewBox="0 0 48 48" fill="none"><path d="M24 8c-8 8-14 14-14 22a14 14 0 0028 0c0-8-6-14-14-22z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></div>
-
                     <div class="projeto-text">
                         <h3>Rondas de sábado</h3>
                         <p>Toda semana, voluntários saem pelas praças e ruas centrais levando lanche, água e itens de higiene, encerrando na Feira Central — o trabalho contínuo por trás das campanhas maiores.</p>
@@ -118,7 +116,6 @@
 
                 <div class="projeto-row">
                     <div class="projeto-icon"><svg viewBox="0 0 48 48" fill="none"><path d="M10 20l14-10 14 10v16a2 2 0 01-2 2H12a2 2 0 01-2-2V20z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M19 38V27h10v11" stroke="currentColor" stroke-width="2"/></svg></div>
-
                     <div class="projeto-text">
                         <h3>Cestas básicas e apoio a famílias</h3>
                          <p>Entrega de alimentos a famílias em vulnerabilidade social nas comunidades urbanas e rurais de Campina Grande, ampliando o cuidado para além do centro da cidade.</p>
@@ -129,32 +126,30 @@
 
         <section class="campanhas" id="campanhas">
             <div class="wrap">
-
                 <div class="campanhas-head">
                     <h2>Campanhas realizadas</h2>
                     <p>Um retrato do trabalho ao longo dos anos — cada edição responde a uma necessidade concreta de quem vive nas ruas de Campina Grande.</p>
                 </div>
-
                 <div class="timeline">
                     <div class="tl-item">
                         <div class="tl-year">2026 — 14ª Campanha do Agasalho</div>
                          <p>Arrecadação de casacos, mantas e cobertores para cerca de 400 pessoas em situação de rua identificadas no município, com entregas semanais para repor itens gastos pelo uso nas ruas.</p>
-                </div>
-                <div class="tl-item">
+                    </div>
+                    <div class="tl-item">
                         <div class="tl-year">2024 — 12ª Campanha do Agasalho</div>
                         <p>Nova edição da campanha de inverno, com arrecadação de cobertores, mantas e agasalhos iniciada em maio para distribuição direta a quem dorme ao relento.</p>
-                </div>
-                <div class="tl-item">
-                    <div class="tl-year">2023 — 11ª Campanha do Agasalho e 11º Natal dos Moradores em Situação de Rua</div>
-                    <p>Duas frentes no mesmo ano: a campanha de inverno e a celebração natalina na sede da fraternidade, no Centro de Campina Grande.</p>
-                </div>
-                <div class="tl-item">
-                    <div class="tl-year">2022 — 10ª Campanha do Agasalho</div>
-                    <p>Mais de 400 itens distribuídos, incluindo 380 cobertores novos, além da participação da fraternidade na exposição das pastorais sociais da Diocese de Campina Grande.</p>
-                </div>
-                <div class="tl-item">
-                    <div class="tl-year">2021 — 9ª Campanha do Agasalho e 9º Natal dos Moradores em Situação de Rua</div>
-                    <p>Mais de 1.500 itens distribuídos entre maio e agosto, e celebração natalina com Santa Missa e ceia na Praça da Bandeira.</p>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-year">2023 — 11ª Campanha do Agasalho e 11º Natal dos Moradores em Situação de Rua</div>
+                        <p>Duas frentes no mesmo ano: a campanha de inverno e a celebração natalina na sede da fraternidade, no Centro de Campina Grande.</p>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-year">2022 — 10ª Campanha do Agasalho</div>
+                        <p>Mais de 400 itens distribuídos, incluindo 380 cobertores novos, além da participação da fraternidade na exposição das pastorais sociais da Diocese de Campina Grande.</p>
+                    </div>
+                    <div class="tl-item">
+                        <div class="tl-year">2021 — 9ª Campanha do Agasalho e 9º Natal dos Moradores em Situação de Rua</div>
+                        <p>Mais de 1.500 itens distribuídos entre maio e agosto, e celebração natalina com Santa Missa e ceia na Praça da Bandeira.</p>
                     </div>
                 </div>
             </div>
@@ -163,41 +158,41 @@
         <section class="depoimentos" id="depoimentos">
             <div class="wrap">
                 <div class="depoimentos-head">
-                <h2>Quem vive esse trabalho</h2>
-                <p>Vozes de voluntários e pessoas acompanhadas pela fraternidade.</p>
+                    <h2>Quem vive esse trabalho</h2>
+                    <p>Vozes de voluntários e pessoas acompanhadas pela fraternidade.</p>
                 </div>
                 <div class="depo-grid">
-                <div class="depo-card">
-                    <p class="depo-quote">"Comecei ajudando num sábado só pra conhecer o trabalho e não parei mais. É a semana inteira que a gente espera por aquela noite."</p>
-                    <div class="depo-who">
-                    <div class="depo-avatar">V</div>
-                    <div>
-                        <div class="depo-name">Voluntária</div>
-                        <div class="depo-role">Participa das rondas de sábado</div>
+                    <div class="depo-card">
+                        <p class="depo-quote">"Comecei ajudando num sábado só pra conhecer o trabalho e não parei mais. É a semana inteira que a gente espera por aquela noite."</p>
+                        <div class="depo-who">
+                            <div class="depo-avatar">V</div>
+                            <div>
+                                <div class="depo-name">Voluntária</div>
+                                <div class="depo-role">Participa das rondas de sábado</div>
+                            </div>
+                        </div>
                     </div>
+                    <div class="depo-card">
+                        <p class="depo-quote">"Na Campanha do Agasalho a gente sente que alguém lembrou da gente antes do frio chegar, não só depois."</p>
+                        <div class="depo-who">
+                            <div class="depo-avatar">P</div>
+                            <div>
+                                <div class="depo-name">Pessoa em situação de rua</div>
+                                <div class="depo-role">Acompanhada pela fraternidade</div>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="depo-card">
-                    <p class="depo-quote">"Na Campanha do Agasalho a gente sente que alguém lembrou da gente antes do frio chegar, não só depois."</p>
-                    <div class="depo-who">
-                    <div class="depo-avatar">P</div>
-                    <div>
-                        <div class="depo-name">Pessoa em situação de rua</div>
-                        <div class="depo-role">Acompanhada pela fraternidade</div>
+                    <div class="depo-card">
+                        <p class="depo-quote">"O que mais chama atenção é a constância. Não é uma ação isolada, é gente que volta toda semana."</p>
+                        <div class="depo-who">
+                            <div class="depo-avatar">A</div>
+                            <div>
+                                <div class="depo-name">Apoiador</div>
+                                <div class="depo-role">Doador recorrente</div>
+                            </div>
+                        </div>
                     </div>
-                    </div>
-                </div>
-                <div class="depo-card">
-                    <p class="depo-quote">"O que mais chama atenção é a constância. Não é uma ação isolada, é gente que volta toda semana."</p>
-                    <div class="depo-who">
-                    <div class="depo-avatar">A</div>
-                    <div>
-                        <div class="depo-name">Apoiador</div>
-                        <div class="depo-role">Doador recorrente</div>
-                    </div>
-                    </div>
-                </div>
-                <p class="depo-disclaimer">Depoimentos ilustrativos para fins de protótipo — substitua por relatos reais e autorizados da fraternidade antes de publicar.</p>
+                    <p class="depo-disclaimer">Depoimentos ilustrativos para fins de protótipo — substitua por relatos reais e autorizados da fraternidade antes de publicar.</p>
                 </div>
             </div>
         </section>
@@ -205,76 +200,106 @@
         <section class="ajudar" id="ajudar">
             <div class="wrap">
                 <div class="ajudar-grid">
-                <div class="ajudar-head">
-                    <h2>Como ajudar</h2>
-                    <p>A fraternidade se mantém com a generosidade de quem acredita nesse trabalho. Hoje, inclusive, o maior desafio é manter a sede fixa no Centro — todo apoio faz diferença direta nisso.</p>
-                </div>
-
-                <div class="card pix-card">
-                    <div>
-                    <h3>Doe via Pix</h3>
-                    <p>Sua doação sustenta a sede, as campanhas e as saídas semanais às ruas.</p>
-                    <div class="pix-key">
-                        <code>22.150.744/0001-25</code>
-                        <button class="copy-btn" onclick="copiarPix(this)">Copiar chave</button>
+                    <div class="ajudar-head">
+                        <h2>Como ajudar</h2>
+                        <p>A fraternidade se mantém com a generosidade de quem acredita nesse trabalho. Hoje, inclusive, o maior desafio é manter a sede fixa no Centro — todo apoio faz diferença direta nisso.</p>
                     </div>
+
+                    <div class="card pix-card">
+                        <div>
+                            <h3>Doe via Pix</h3>
+                            <p>Sua doação sustenta a sede, as campanhas e as saídas semanais às ruas.</p>
+
+                            <div class="qr-code-wrapper">
+                                <img src="images/QRCODE.jpeg" alt="QR Code para doação Pix" class="qr-code-img">
+                            </div>
+
+                            <div class="pix-key">
+                                <code>22.150.744/0001-25</code>
+                                <button class="copy-btn" onclick="copiarPix(this)">Copiar chave</button>
+                            </div>
+                        </div>
+                        <p class="pix-note">Chave Pix (CNPJ) da Fraternidade de Aliança Irmãos de Francisco.</p>
                     </div>
-                    <p class="pix-note">Chave Pix (CNPJ) da Fraternidade de Aliança Irmãos de Francisco.</p>
-                </div>
 
-                <div class="card">
-                    <h3>Doe itens</h3>
-                    <p>Aceitamos doações que ajudam diretamente nas ações da fraternidade:</p>
-                    <ul>
-                    <li>Cobertores, mantas e agasalhos</li>
-                    <li>Itens de higiene pessoal</li>
-                    <li>Alimentos não perecíveis</li>
-                    </ul>
-                    <p style="margin-top:16px; margin-bottom:0;">Leve até a sede, na Rua Vidal de Negreiros, 341 — Centro.</p>
-                </div>
+                    <div class="card">
+                        <h3>Doe itens</h3>
+                        <p>Aceitamos doações que ajudam diretamente nas ações da fraternidade:</p>
+                        <ul>
+                            <li>Cobertores, mantas e agasalhos</li>
+                            <li>Itens de higiene pessoal</li>
+                            <li>Alimentos não perecíveis</li>
+                        </ul>
+                        <p style="margin-top:16px; margin-bottom:0;">Leve até a sede, na Rua Vidal de Negreiros, 341 — Centro.</p>
+                    </div>
 
-                <div class="card">
-                    <h3>Seja voluntário</h3>
-                    <p>Junte-se às rondas de sábado ou às campanhas sazonais. Não é preciso experiência prévia — só disponibilidade e vontade de servir.</p>
-                    <p style="margin-bottom:0;">Fale com a gente pelo WhatsApp para saber os próximos encontros.</p>
-                </div>
+                    <div class="card">
+                        <h3>Seja voluntário</h3>
+                        <p>Junte-se às rondas de sábado ou às campanhas sazonais. Não é preciso experiência prévia — só disponibilidade e vontade de servir.</p>
+                        <p style="margin-bottom:0;">Fale com a gente pelo WhatsApp para saber os próximos encontros.</p>
+                    </div>
 
-                <div class="card">
-                    <h3>Espalhe a palavra</h3>
-                    <p>Siga e compartilhe nossas ações nas redes sociais — ajuda a alcançar mais doadores, voluntários e parceiros para a fraternidade.</p>
-                    <p style="margin-bottom:0;">Cada campanha compartilhada é uma porta a mais aberta.</p>
-                </div>
+                    <div class="card">
+                        <h3>Espalhe a palavra</h3>
+                        <p>Siga e compartilhe nossas ações nas redes sociais — ajuda a alcançar mais doadores, voluntários e parceiros para a fraternidade.</p>
+                        <p style="margin-bottom:0;">Cada campanha compartilhada é uma porta a mais aberta.</p>
+                    </div>
                 </div>
             </div>
         </section>
-    </Main>
+    </main>
 
     <footer class="site" id="contato">
         <div class="wrap">
             <div class="footer-grid">
-            <div>
-                <div class="footer-brand">
-                <img src="https://irmaosdefrancisco.wordpress.com/wp-content/uploads/2021/05/cropped-irmaos-de-francisco-dimensionada.png" alt="Fraternidade Irmãos de Francisco" class="footer-logo">
-                Irmãos de Francisco
+                <div>
+                    <div class="footer-brand">
+                        <img src="https://irmaosdefrancisco.wordpress.com/wp-content/uploads/2021/05/cropped-irmaos-de-francisco-dimensionada.png" alt="Fraternidade Irmãos de Francisco" class="footer-logo">
+                        Irmãos de Francisco
+                    </div>
+                    <p>Fraternidade de Aliança que cuida de moradores em situação de rua em Campina Grande, integrada às pastorais sociais da Diocese.</p>
                 </div>
-                <p>Fraternidade de Aliança que cuida de moradores em situação de rua em Campina Grande, integrada às pastorais sociais da Diocese.</p>
-            </div>
-            <div class="footer-col">
-                <h4>Contato</h4>
-                <p>Rua Vidal de Negreiros, 341 — Centro, Campina Grande/PB</p>
-                <a href="https://wa.me/5583998511555" target="_blank" rel="noopener">WhatsApp (83) 9 9851-1555</a>
-            </div>
-            <div class="footer-col">
-                <h4>Redes sociais</h4>
-                <a href="https://www.instagram.com/irmaosdefrancisco/" target="_blank" rel="noopener">Instagram</a>
-                <a href="https://www.facebook.com/fraternidadeirmaosdefrancisco" target="_blank" rel="noopener">Facebook</a>
-            </div>
+                <div class="footer-col">
+                    <h4>Contato</h4>
+                    <p>Rua Vidal de Negreiros, 341 — Centro, Campina Grande/PB</p>
+                    <a href="https://wa.me/5583998511555" target="_blank" rel="noopener">WhatsApp (83) 9 9851-1555</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Redes sociais</h4>
+                    <a href="https://www.instagram.com/irmaosdefrancisco/" target="_blank" rel="noopener">Instagram</a>
+                    <a href="https://www.facebook.com/fraternidadeirmaosdefrancisco" target="_blank" rel="noopener">Facebook</a>
+                </div>
             </div>
             <div class="footer-bottom">
-            <span>© Fraternidade de Aliança Irmãos de Francisco</span>
-            <span>Redesign de estudo — Projeto Integrador, Sistemas de Informação</span>
+                <span>© Fraternidade de Aliança Irmãos de Francisco</span>
+                <span>Redesign de estudo — Projeto Integrador, Sistemas de Informação</span>
             </div>
         </div>
     </footer>
+
+    <div id="modalPix" class="modal-overlay">
+        <div class="modal-box">
+            <button class="modal-close" onclick="fecharModalPix()">&times;</button>
+            <div class="modal-header">
+                <i class="fa-brands fa-pix icone-destaque"></i>
+                <h2>Faça sua doação via Pix</h2>
+                <p>Utilize a chave abaixo para fazer a sua doação e apoiar as nossas ações.</p>
+            </div>
+            <div class="pix-copy-area">
+                <label>Chave Pix (CNPJ):</label>
+                <div class="input-group">
+                    <input type="text" id="chavePixModal" value="22.150.744/0001-25" readonly>
+                    <button id="btnCopiarModal" onclick="copiarChaveModal()">Copiar</button>
+                </div>
+                <span id="mensagemSucesso" class="msg-sucesso">Chave copiada com sucesso!</span>
+            </div>
+        </div>
+    </div>
+
+    <a href="#" id="btnVoltarTopo" class="btn-voltar-topo" title="Voltar ao topo">
+        <i class="fa-solid fa-arrow-up"></i>
+    </a>
+
+    <script src="script.js"></script>
 </body>
 </html>
