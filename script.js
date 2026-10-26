@@ -55,3 +55,9 @@ window.addEventListener('scroll', () => {
         btnTopo.classList.remove('mostrar');
     }
 });
+
+// === MENU MOBILE (ADICIONADO) ===
+function toggleMenu() {
+    const nav = document.getElementById('navLinks');
+    nav.classList.toggle('ativo');
+}

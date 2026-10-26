@@ -21,7 +21,12 @@
                 <img src="https://irmaosdefrancisco.wordpress.com/wp-content/uploads/2021/05/cropped-irmaos-de-francisco-dimensionada.png" alt="Fraternidade Irmãos de Francisco" class="logo">
                 Irmãos de Francisco
             </a>
-            <nav class="links">
+
+            <button class="menu-toggle" aria-label="Abrir menu" onclick="toggleMenu()">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+
+            <nav class="links" id="navLinks">
                 <a href="#sobre">Sobre</a>
                 <a href="#projetos">Projetos</a>
                 <a href="#campanhas">Campanhas</a>
@@ -280,8 +285,8 @@
 
                 <div class="qr-code-wrapper">
                     <img src="images/QRCODE.jpeg" alt="QR Code Pix" class="qr-code-img">
-                </div>     
-                           
+                </div>
+
             </div>
             <div class="pix-copy-area">
                 <label>Chave Pix (CNPJ):</label>
