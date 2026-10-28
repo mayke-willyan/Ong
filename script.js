@@ -61,3 +61,10 @@ function toggleMenu() {
     const nav = document.getElementById('navLinks');
     nav.classList.toggle('ativo');
 }
+
+// Fecha o menu mobile ao clicar em um link ou no botão de doar
+document.querySelectorAll('#navLinks a, #navLinks button').forEach(item => {
+    item.addEventListener('click', () => {
+        document.getElementById('navLinks').classList.remove('ativo');
+    });
+});

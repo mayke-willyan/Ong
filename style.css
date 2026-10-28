@@ -154,12 +154,13 @@ section.section-1{padding:88px 0 96px;}
 }
 .section-1-art{display:flex; justify-content:center;}
 .section-1-art svg{width:100%; max-width:380px;}
+.section-1-art img{width:100%; max-width:460px; height:auto; aspect-ratio:1/1; object-fit:contain;}
 
 section.information{
     background:var(--bark); color:var(--cream); padding:44px 0;
 }
 .information-grid{
-    display:grid; grid-template-columns:repeat(4,1fr); gap:24px; text-align:left;
+    display:grid; grid-template-columns:repeat(3,1fr); gap:24px; text-align:left;
 }
 .info .num{font-family:'Fraunces', serif; font-size:2.1rem; color:var(--gold);}
 .info .label{font-size:0.88rem; color:#D9CBB4; margin-top:4px;}
@@ -465,18 +466,14 @@ QR CODE
 }
 
 /* =========================================
-   RESPONSIVIDADE (ATUALIZADO)
+   RESPONSIVIDADE
 ========================================= */
 @media (max-width:860px){
-    .nav-inner { 
-        padding: 16px 20px; 
-        position: relative; 
-    }
-    
-    .menu-toggle { 
-        display: block;
-    }
-    
+    .wrap { padding: 0 20px; }
+
+    /* Cabeçalho + menu */
+    .nav-inner { padding: 14px 20px; position: relative; }
+    .menu-toggle { display: block; padding: 6px; }
     nav.links {
         display: none;
         flex-direction: column;
@@ -487,44 +484,54 @@ QR CODE
         background: var(--cream);
         padding: 20px;
         box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-        align-items: center;
-        gap: 20px;
+        align-items: stretch;
+        text-align: center;
+        gap: 6px;
         border-bottom: 1px solid var(--line);
     }
-    
-    nav.links.ativo {
-        display: flex;
-    }
+    nav.links.ativo { display: flex; }
+    nav.links a { padding: 12px 0; font-size: 1rem; }
+    .nav-doar { justify-content: center; margin-top: 8px; padding: 14px 24px; }
 
-    .section-1 h1 {
-        max-width: 100%;
-        font-size: 2.2rem;
-    }
-
-    .section1-actions {
-        flex-direction: column;
-        width: 100%;
-    }
-    
-    .section1-actions .btn {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .information-grid {
+    /* HOME */
+    section.section-1 { padding: 36px 0 56px; }
+    .section-grid {
         grid-template-columns: 1fr;
-        text-align: center;
         gap: 32px;
+        text-align: center;
     }
+    .section-1-art { order: -1; }
+    .section-1-art img { max-width: 240px; margin: 0 auto; }
+    .name { font-size: 0.85rem; margin-bottom: 12px; }
+    .section-1 h1 { max-width: 100%; font-size: clamp(1.9rem, 7.5vw, 2.4rem); }
+    .section-1 p.lead { font-size: 1.02rem; max-width: 100%; margin: 18px auto 0; }
+    .section1-actions { flex-direction: column; width: 100%; margin-top: 28px; gap: 12px; }
+    .section1-actions .btn { width: 100%; justify-content: center; }
 
-    .wrap { padding: 0 20px; }
-    .hero-grid { grid-template-columns: 1fr; gap: 40px; }
-    .hero-art { order: -1; }
-    .stats-grid { grid-template-columns: repeat(2,1fr); gap: 28px; }
-    .sobre-grid { grid-template-columns: 1fr; }
+    /* Estatísticas */
+    section.information { padding: 36px 0; }
+    .information-grid { grid-template-columns: 1fr; text-align: center; gap: 28px; }
+
+    /* Demais seções */
+    section.sobre, section.projetos, section.campanhas,
+    section.depoimentos, section.ajudar { padding: 64px 0; }
+    .sobre-grid { grid-template-columns: 1fr; gap: 24px; }
+    .sobre-grid h2 { max-width: 100%; }
     .projeto-row, .projeto-row:nth-child(even) { grid-template-columns: 1fr; gap: 16px; }
     .projeto-row:nth-child(even) .projeto-icon { order: 0; }
     .ajudar-grid { grid-template-columns: 1fr; }
+    .card { padding: 28px 22px; }
     .depo-grid { grid-template-columns: 1fr; }
     .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+    .pix-key { flex-direction: column; align-items: stretch; text-align: center; }
+    .pix-key code { word-break: break-all; }
+    .btn-voltar-topo { bottom: 20px; right: 20px; width: 44px; height: 44px; }
+}
+
+@media (max-width:480px){
+    .marca { font-size: 0.95rem; gap: 8px; }
+    .logo { width: 30px; height: 30px; }
+    .section-1-art img { max-width: 200px; }
+    .modal-box { padding: 28px 20px; }
+    .footer-bottom { flex-direction: column; }
 }
