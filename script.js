@@ -1,4 +1,4 @@
-// === FUNÇÃO ORIGINAL (SECÇÃO "COMO AJUDAR") ===
+
 function copiarPix(btn){
   const chave = "22.150.744/0001-25";
   navigator.clipboard.writeText(chave).then(() => {
@@ -56,13 +56,13 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// === MENU MOBILE (ADICIONADO) ===
+
 function toggleMenu() {
     const nav = document.getElementById('navLinks');
     nav.classList.toggle('ativo');
 }
 
-// Fecha o menu mobile ao clicar em um link ou no botão de doar
+
 document.querySelectorAll('#navLinks a, #navLinks button').forEach(item => {
     item.addEventListener('click', () => {
         document.getElementById('navLinks').classList.remove('ativo');
